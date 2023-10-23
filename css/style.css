@@ -218,6 +218,9 @@ section.main .tab-content>ul>li:nth-child(3n+1){
 section.main .tab-content>ul>li figure{
   margin-bottom: 12px;
 }
+section.main .tab-content>ul>li figcaption{
+  text-align: center;
+}
 section.main .result{
   position: fixed;
   top: 50%;
