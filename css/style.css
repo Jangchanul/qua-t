@@ -315,3 +315,14 @@ section.main .result .reco button{
 section.main .result .reco .slider_next{
   transform: rotate(180deg);
 }
+
+.main .tab_menu .bt_next{
+  background-color: #b13a4b;
+  color: #FFF;
+  margin: 0 auto 1vw;
+  display: block;
+  padding: 0.5vw 1vw;
+  border-radius: 8px;
+  font-size: 1.6vw;
+  font-weight: bold;
+}
