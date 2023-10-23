@@ -140,9 +140,8 @@ section.main .container .fff{
   align-items: center;
   text-align: center;
 }
-section.main .container .fff .inner{
-  width: 70%;
-  margin: 0 auto 1vw;
+section.main .container .fff label{
+  margin: 0 auto;
 }
 section.main .container .fff span{
   background-color: #b13a4b;
