@@ -125,11 +125,12 @@ section.main .container{
   transform: translate(-50%,-50%);
 }
 section.main .container .upload{
+  width: 40%;
   background-color: #C5827F;
   padding: 1vw;
   box-sizing: border-box;
 }
-section.main .container #dropzone{
+section.main .container .fff{
   background-color: #fff;
   border-radius: 8px;
   padding: 3vw 0;
@@ -137,26 +138,19 @@ section.main .container #dropzone{
   height: 100%;
   display: flex;
   align-items: center;
-}
-section.main #dropzone form{
-  width: 70%;
-  margin: 0 auto;
-}
-section.main #dropzone form img{
-  margin-bottom: 1vw;
-}
-section.main #dropzone form .bt{
-  display: block;
-  width: 100%;
-  background-color: #B13A4B;
-  color: #fff;
-  font-size: 1.3vw;
-  font-weight: bold;
-  padding: 0.5vw 1.5vw;
-  box-sizing: border-box;
-  border-radius: 24px;
-  cursor: pointer;
   text-align: center;
+}
+section.main .container .fff .inner{
+  width: 70%;
+  margin: 0 auto 1vw;
+}
+section.main .container .fff span{
+  background-color: #b13a4b;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5vw 3vw;
+  border-radius: 12px;
+  font-size: 1.5vw;
 }
 section.main .container .tab_menu{
   width: 60%;
