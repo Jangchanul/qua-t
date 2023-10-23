@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QUA-T</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./js/script.js">
+        <link rel="stylesheet" href="./css/swiper.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    </head>
+    <body>
+        <section class="main">
+            <div class="bg1"><img src="./img/bg_l.png" alt=""></div>
+            <div class="bg2"><img src="./img/round.png" alt=""></div>
+            <div class="container">
+                <div class="upload">
+                    <div id="dropzone">
+                        <form action="">
+                            <div class="dz-message needsclick">
+                                <span class="text">
+                                    <img src="./img/upload.png" alt="Camera"/>
+                                </span>
+                                <span class="bt">사진업로드</span>    
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab_menu">
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">전체</li>
+                        <li class="tab-link" data-tab="tab-2">유리알 틴트</li>
+                        <li class="tab-link" data-tab="tab-3">유얼즈 립 틴트</li>
+                        <li class="tab-link" data-tab="tab-3">마이무드 립스틱</li>
+                        <li class="tab-link" data-tab="tab-3">루미네어 립밤</li>
+                    </ul>
+
+                    <div id="tab-1" class="tab-content current">
+                        <ul>
+                            <li>
+                                <figure><img src="./img/lip1.png" alt=""></figure>
+                                <figcaption><MARQUEE  scrollamount="2">루미네어 틴티드 컬러립밤 - 코랄캐러맬</MARQUEE></figcaption>
+                            </li>
+                            <li>
+                                <figure><img src="./img/lip2.png" alt=""></figure>
+                                <figcaption>루미네어 틴티드 컬러립밤 - 인핑크</figcaption>
+                            </li>
+                            <li>
+                                <figure><img src="./img/lip3.png" alt=""></figure>
+                                <figcaption>루미네어 틴티드 컬러립밤 - 레드메모리</figcaption>
+                            </li>
+                            <li>
+                                <figure><img src="./img/lip1.png" alt=""></figure>
+                                <figcaption>루미네어 틴티드 컬러립밤 - 로지룩</figcaption>
+                            </li>
+                            <li>
+                                <figure><img src="./img/lip4.png" alt=""></figure>
+                                <figcaption>마이무드 립스틱 - 어도러블 텐저린</figcaption>
+                            </li>
+                            <li>
+                                <figure><img src="./img/lip5.png" alt=""></figure>
+                                <figcaption>마이무드 립스틱 - 애프터 글로우</figcaption>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-2" class="tab-content">tab content2</div>
+                    <div id="tab-3" class="tab-content">tab content3</div>
+                </div>
+            </div>
+        </section>
+        <script>
+            $(document).ready(function () {
+
+                $('ul.tabs li').click(function () {
+                    var tab_id = $(this).attr('data-tab');
+
+                    $('ul.tabs li').removeClass('current');
+                    $('.tab-content').removeClass('current');
+
+                    $(this).addClass('current');
+                    $("#" + tab_id).addClass('current');
+                })
+
+            })
+        </script>
+    </body>
+</html>

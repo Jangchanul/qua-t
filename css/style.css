@@ -1,0 +1,317 @@
+@import "reset.css";
+body{background-color: #ede9e6;}
+img{display: block;width: 100%;height: 100%;}
+
+section.intro .layer1{
+  display: flex;
+  align-items: center;
+  padding: 3vw 0;
+  box-sizing: border-box;
+  background-image: url(/img/intro_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.intro .layer1 .container{
+  width: 60%;
+}
+section.intro .layer1 .text{
+  width: 80%;
+  margin: 0 auto 4vw;
+}
+section.intro .layer1 .text h1{
+  width: 40%;
+  margin-bottom: 2.5vw;
+}
+section.intro .layer1 .text .arrow_d{
+  width: 1.5vw;
+  animation: motion 0.5s linear 0s infinite alternate;
+}
+@keyframes motion {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-10px);
+  }
+}
+section.intro .layer1 .text .ex{
+  white-space: pre-line;
+  font-size: 3vw;
+}
+section.intro .layer1 .text .ex strong{
+  font-weight: bold;
+}
+section.intro .layer1 .text .ex small{
+  font-size: 1.5vw;
+}
+section.intro .container>button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b13a4b;
+  color: #fff;
+  width: 100%;
+  font-size: 2vw;
+  font-weight: bold;
+  padding: 1vw;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+section.intro .container>button span{
+  display: block;
+  width: 5%;
+  margin-left: 1.8vw;
+}
+section.intro .img_box{
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+section.intro .img_box .svg{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+section.intro .layer1 .img_box:hover>img{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+section.intro .layer2{
+  position: relative;
+  padding: 3vw 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+section.intro .layer2 .bg_r{
+  position: absolute;
+  top: -3vw;
+  left: 0;
+  width: 15vw;
+}
+section.intro .layer2 h2{
+  width: 40%;
+  margin: 0 auto 3vw;
+}
+section.intro .layer2 .container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ---------------------------- */
+section.main .bg1{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+}
+section.main .bg2{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(180deg);
+  width: 20%;
+}
+section.main .container{
+  display: flex;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+section.main .container .upload{
+  background-color: #C5827F;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+section.main .container #dropzone{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3vw 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+section.main #dropzone form{
+  width: 70%;
+  margin: 0 auto;
+}
+section.main #dropzone form img{
+  margin-bottom: 1vw;
+}
+section.main #dropzone form .bt{
+  display: block;
+  width: 100%;
+  background-color: #B13A4B;
+  color: #fff;
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: 0.5vw 1.5vw;
+  box-sizing: border-box;
+  border-radius: 24px;
+  cursor: pointer;
+  text-align: center;
+}
+section.main .container .tab_menu{
+  width: 60%;
+  background: #EFDFDE;
+}
+section.main .tabs{
+  padding: 1vw;
+  border-bottom: 1px solid #C5827F;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  text-wrap: nowrap;
+  -ms-overflow-style: none;
+}
+section.main .tabs::-webkit-scrollbar{
+  display: none;
+}
+section.main .tabs>li{
+  border: 1px solid #c5827f;
+  background-color: #fff;
+  padding: 0.5vw 1vw;
+  box-sizing: border-box;
+  border-radius: 2vw;
+  margin-left: 1vw;
+}
+section.main .tabs>li:first-child{
+  margin-left: 0;
+}
+ul.tabs li.current{
+  background: #C5827F;
+  color: #fff;
+  font-weight: bold;
+}
+.tab-content{
+  display: none;
+}
+.tab-content.current{
+  display: inherit;
+}
+section.main .tab-content>ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw;
+  box-sizing: border-box;
+  height: 38vw;
+  overflow: auto;
+}
+section.main .tab-content>ul>li{
+  width: 32%;
+  margin-left: 2%;
+  margin-bottom: 12px;
+}
+section.main .tab-content>ul>li:nth-child(3n+1){
+  margin-left: 0%;
+}
+section.main .tab-content>ul>li:nth-child(2) figcaption{
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section.main .tab-content>ul>li:nth-child(3) figcaption{
+  font-size: 0.7vw;
+  text-align: center;
+}
+section.main .tab-content>ul>li figure{
+  margin-bottom: 12px;
+}
+section.main .result{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  background-color: #efdfde;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 1.5vw;
+  box-sizing: border-box;
+}
+section.main .result .flex{
+  background-color: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+section.main .result .makeup{
+  width: 40%;
+  height: 45vw;
+}
+section.main .result figcaption{
+  background-color: #c5827f;
+  color: #FFF;
+  border-radius: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5vw 0;
+  margin-bottom: 1vw;
+}
+section.main .result .select{
+  width: 35%;
+  height: 45vw;
+}
+section.main .result figure{
+  border-radius: 24px;
+  overflow: hidden;
+  height: 90%;
+  position: relative;
+}
+section.main .result figure .ex{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #D54B5A;
+  color: #fff;
+  padding: 3vw;
+  box-sizing: border-box;
+}
+section.main .result figure .ex strong{
+  width: 30%;
+  font-size: 2vw;
+}
+section.main .result figure .ex small{
+  width: 65%;
+  font-size: 1vw;
+  word-break: keep-all;
+}
+section.main .result .reco{
+  width: 20%;
+  height: 45vw;
+  background-color: #c5827f;
+  border-radius: 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+section.main .result .reco h3{
+  color: #fff;
+  font-weight: bold;
+  margin: 1vw 0;
+  text-align: center;
+}
+section.main .result .reco .swiper{
+  width: 80%;
+  height: 80%;
+}
+section.main .result .reco button{
+  display: block;
+  width: 2vw;
+  margin: 1vw auto;
+}
+section.main .result .reco .slider_next{
+  transform: rotate(180deg);
+}
