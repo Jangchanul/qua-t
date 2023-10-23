@@ -8,7 +8,6 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./js/script.js">
-        <link rel="stylesheet" href="./css/swiper.css">
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -19,15 +18,25 @@
             <div class="bg2"><img src="./img/round.png" alt=""></div>
             <div class="container">
                 <div class="upload">
-                    <div id="dropzone">
-                        <form action="">
-                            <div class="dz-message needsclick">
-                                <span class="text">
-                                    <img src="./img/upload.png" alt="Camera"/>
-                                </span>
-                                <span class="bt">사진업로드</span>    
-                            </div>
-                        </form>
+                    <div class="fff">
+                        <label
+                            class="label"
+                            id="label"
+                            for="input"
+                            ondragenter={handleDragStart}
+                            ondragleave={handleDragEnd}
+                            ondrop={handleDrop}>
+                            <div class="inner" id="inner"><img src="./img/upload.png" alt=""></div>
+                            <span>사진업로드</span>
+                        </label>
+                        <input
+                            id="input"
+                            class="input"
+                            accept="image/*"
+                            type="file"
+                            required="true"
+                            multiple="true"
+                            hidden="true">
                     </div>
                 </div>
                 <div class="tab_menu">
@@ -43,7 +52,9 @@
                         <ul>
                             <li>
                                 <figure><img src="./img/lip1.png" alt=""></figure>
-                                <figcaption><MARQUEE  scrollamount="2">루미네어 틴티드 컬러립밤 - 코랄캐러맬</MARQUEE></figcaption>
+                                <figcaption>
+                                    <marquee scrollamount="2">루미네어 틴티드 컬러립밤 - 코랄캐러맬</marquee>
+                                </figcaption>
                             </li>
                             <li>
                                 <figure><img src="./img/lip2.png" alt=""></figure>
@@ -71,7 +82,7 @@
                     <div id="tab-3" class="tab-content">tab content3</div>
                     <button class="bt_next" type="button" onclick="location.href='result.html'">다음</button>
                 </div>
-                
+
             </div>
         </section>
         <script>
@@ -86,8 +97,19 @@
                     $(this).addClass('current');
                     $("#" + tab_id).addClass('current');
                 })
+            });
+            const handleDrop = (event) => {
+                event.preventDefault();
 
-            })
+                const file = event
+                    .dataTransfer
+                    .files[0];
+                readImage(file);
+                setActive(false);
+            };
+            const handleDragOver = (event) => {
+                event.preventDefault();
+            };
         </script>
     </body>
 </html>
