@@ -143,6 +143,10 @@ section.main .container .fff{
 section.main .container .fff label{
   margin: 0 auto;
 }
+section.main .container .fff .inner{
+  width: 80%;
+  margin: 0 auto 1vw;
+}
 section.main .container .fff span{
   background-color: #b13a4b;
   color: #fff;
