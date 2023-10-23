@@ -1,5 +1,5 @@
 @import "reset.css";
-body{background-color: #ede9e6;}
+body{background-color: #ede9e6;font-family: 'Noto Sans KR', sans-serif;}
 img{display: block;width: 100%;height: 100%;}
 
 section.intro .layer1{
@@ -202,6 +202,16 @@ section.main .tab-content>ul>li{
   width: 32%;
   margin-left: 2%;
   margin-bottom: 12px;
+}
+section.main .tab-content>ul>li>figure{
+  border-radius: 8px;
+  overflow: hidden;
+}
+section.main .tab-content>ul>li:hover figure{
+  background-color: #222;
+}
+section.main .tab-content>ul>li:hover figure img{
+  opacity: 0.3;
 }
 section.main .tab-content>ul>li:nth-child(3n+1){
   margin-left: 0%;
