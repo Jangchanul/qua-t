@@ -357,6 +357,14 @@ section.main .result .reco .slider_next{
   position: relative;
   width: 5vw;
   height: 5vw;
+  animation: rotate 3s infinite;
+}
+.spinner {
+  display: inline-block;
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  animation: rotate 3s linear infinite;
 }
 .dot-spinner div {
   position: absolute;
@@ -450,4 +458,31 @@ section.main .result .reco .slider_next{
   100% {
     width: 100%;
   }
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.upload .grid{
+  width: 20vw;
+  margin: 0 auto;
+}
+.upload .grid input{
+  display: none;
+}
+.upload .grid .image-box{
+  margin-bottom: 2vw;
+}
+.upload .img .bt_upload span{
+  background-color: #B82B39;
+  color: #FFF;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 0.5vw 2vw;
+  margin-top: 1vw;
 }
