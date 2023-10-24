@@ -470,6 +470,7 @@ section.main .result .reco .slider_next{
 .upload .fff #drop-zone{
   width: 20vw;
   margin: 0 auto;
+  cursor: pointer;
 }
 .upload .fff #drop-zone>img{
   margin-bottom: 3vw;
