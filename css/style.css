@@ -7,7 +7,7 @@ section.intro .layer1{
   align-items: center;
   padding: 3vw 0;
   box-sizing: border-box;
-  background-image: url(/img/intro_bg.png);
+  background-image: url(../img/intro_bg.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
