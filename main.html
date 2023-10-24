@@ -8,7 +8,9 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./js/script.js">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -20,24 +22,11 @@
             <div class="container">
                 <div class="upload">
                     <div class="fff">
-                        <label
-                            class="label"
-                            id="label"
-                            for="input"
-                            ondragenter={handleDragStart}
-                            ondragleave={handleDragEnd}
-                            ondrop={handleDrop}>
-                            <div class="inner" id="inner"><img src="./img/upload.png" alt=""></div>
-                            <span>사진업로드</span>
-                        </label>
-                        <input
-                            id="input"
-                            class="input"
-                            accept="image/*"
-                            type="file"
-                            required="true"
-                            multiple="true"
-                            hidden="true">
+                        <div id="drop-zone">
+                            <img src="./img/upload.png" alt="" id="image">
+                            <span>사진 업로드</span>
+                            <input type="file" id="myfile" hidden="hidden">
+                        </div>
                     </div>
                 </div>
                 <div class="tab_menu">
@@ -50,7 +39,7 @@
                     </ul>
 
                     <div id="tab-1" class="tab-content current">
-                        <ul>
+                        <ul class="check">
                             <li>
                                 <figure><img src="./img/lip1.png" alt=""></figure>
                                 <figcaption>루미네어 틴티드 컬러립밤 - 코랄캐러맬</figcaption>
@@ -85,6 +74,46 @@
             </div>
         </section>
         <script>
+            const dropZone = document.querySelector('#drop-zone');
+            const inputElement = document.querySelector('input');
+            const img = document.querySelector('#image');
+            let p = document.querySelector('p')
+
+            inputElement.addEventListener('change', function (e) {
+                const clickFile = this.files[0];
+                if (clickFile) {
+                    img.style = "display:block;";
+                    const reader = new FileReader();
+                    reader.readAsDataURL(clickFile);
+                    reader.onloadend = function () {
+                        const result = reader.result;
+                        let src = this.result;
+                        img.src = src;
+                        img.alt = clickFile.name
+                    }
+                }
+            })
+            dropZone.addEventListener('click', () => inputElement.click());
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                img.style = "display:block;";
+                let file = e
+                    .dataTransfer
+                    .files[0];
+
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onloadend = function () {
+                    e.preventDefault()
+                    let src = this.result;
+                    img.src = src;
+                    img.alt = file.name
+                }
+            });
+
             $(document).ready(function () {
 
                 $('ul.tabs li').click(function () {
@@ -96,19 +125,11 @@
                     $(this).addClass('current');
                     $("#" + tab_id).addClass('current');
                 })
+                $(".check>li").on('click',function(){
+                    $(this).children("figcaption").toggleClass("ck")
+                    $(".check>li figcaption").not($(this).children("figcaption")).removeClass("ck")
+                });
             });
-            const handleDrop = (event) => {
-                event.preventDefault();
-
-                const file = event
-                    .dataTransfer
-                    .files[0];
-                readImage(file);
-                setActive(false);
-            };
-            const handleDragOver = (event) => {
-                event.preventDefault();
-            };
         </script>
     </body>
 </html>

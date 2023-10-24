@@ -143,18 +143,6 @@ section.main .container .fff{
 section.main .container .fff label{
   margin: 0 auto;
 }
-section.main .container .fff .inner{
-  width: 80%;
-  margin: 0 auto 1vw;
-}
-section.main .container .fff span{
-  background-color: #b13a4b;
-  color: #fff;
-  display: inline-block;
-  padding: 0.5vw 3vw;
-  border-radius: 12px;
-  font-size: 1.5vw;
-}
 section.main .container .tab_menu{
   width: 60%;
   background: #EFDFDE;
@@ -205,11 +193,13 @@ section.main .tab-content>ul>li{
   width: 32%;
   margin-left: 2%;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 section.main .tab-content>ul>li>figure{
   border-radius: 8px;
   overflow: hidden;
 }
+
 section.main .tab-content>ul>li:hover figure{
   background-color: #222;
 }
@@ -224,6 +214,9 @@ section.main .tab-content>ul>li figure{
 }
 section.main .tab-content>ul>li figcaption{
   text-align: center;
+}
+section.main .tab-content .check figcaption.ck{
+  color: red;
 }
 section.main .result{
   position: fixed;
@@ -474,15 +467,18 @@ section.main .result .reco .slider_next{
 .upload .grid input{
   display: none;
 }
-.upload .grid .image-box{
-  margin-bottom: 2vw;
+.upload .fff #drop-zone{
+  width: 20vw;
+  margin: 0 auto;
 }
-.upload .img .bt_upload span{
+.upload .fff #drop-zone>img{
+  margin-bottom: 3vw;
+}
+.upload .fff span{
   background-color: #B82B39;
   color: #FFF;
   font-size: 1.5vw;
   font-weight: bold;
   border-radius: 12px;
   padding: 0.5vw 2vw;
-  margin-top: 1vw;
 }
