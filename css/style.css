@@ -239,10 +239,7 @@ section.main .result .flex{
   padding: 2vw;
   box-sizing: border-box;
 }
-section.main .result .makeup{
-  width: 38%;
-  height: 45vw;
-}
+
 section.main .result figcaption{
   background-color: #c5827f;
   color: #FFF;
@@ -252,34 +249,38 @@ section.main .result figcaption{
   padding: 0.5vw 0;
   margin-bottom: 1vw;
 }
+section.main .result .makeup{
+  width: 38%;
+}
 section.main .result .select{
   width: 38%;
-  height: 45vw;
 }
+section.main .result .product{
+  width: 18%;
+}
+
 section.main .result figure{
   border-radius: 24px;
   overflow: hidden;
-  height: 90%;
-  position: relative;
+  height: 45vw;
 }
-section.main .result figure .ex{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #D54B5A;
+section.main .result .product>figure{
+  height: 34vw;
+}
+section.main .result .ex{
+    background-color: #D54B5A;
   color: #fff;
-  padding: 3vw;
+  padding: 2vw 1vw;
   box-sizing: border-box;
+  height: 11vw;
 }
-section.main .result figure .ex strong{
-  width: 30%;
+section.main .result .ex strong{
+  display: block;
+  text-align: center;
   font-size: 2vw;
+  margin-bottom: 1vw;
 }
-section.main .result figure .ex small{
-  width: 65%;
+section.main .result .ex small{
   font-size: 1vw;
   word-break: keep-all;
 }
